@@ -41,7 +41,7 @@
 		4D189719223F32D30089A8F4 /* Birrung.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Birrung.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D18971C223F32D30089A8F4 /* Birrung.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Birrung.h; sourceTree = "<group>"; };
 		4D18971D223F32D30089A8F4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4D189724223F35530089A8F4 /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TabBarController.swift; path = Birrung/TabBarController.swift; sourceTree = "<group>"; };
+		4D189724223F35530089A8F4 /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		4D189726223F35530089A8F4 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		4D189727223F35530089A8F4 /* ListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		4D189728223F35530089A8F4 /* SelectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectionViewController.swift; sourceTree = "<group>"; };
@@ -67,7 +67,7 @@
 		4D189759223F361D0089A8F4 /* Arrangements.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Arrangements.swift; sourceTree = "<group>"; };
 		4D18975A223F361D0089A8F4 /* UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		4D189762223F361D0089A8F4 /* UIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
-		4D18976E223F37440089A8F4 /* Fonts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = SOURCE_ROOT; };
+		4D18976E223F37440089A8F4 /* Fonts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Fonts.swift; path = Birrung/Fonts.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,12 +85,6 @@
 			isa = PBXGroup;
 			children = (
 				4D18971B223F32D30089A8F4 /* Birrung */,
-				4D18972B223F35530089A8F4 /* NavigationController.swift */,
-				4D189724223F35530089A8F4 /* TabBarController.swift */,
-				4D18976E223F37440089A8F4 /* Fonts.swift */,
-				4D189725223F35530089A8F4 /* ViewControllers */,
-				4D18972C223F35530089A8F4 /* Views */,
-				4D189757223F361D0089A8F4 /* Extensions */,
 				4D18971A223F32D30089A8F4 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -106,6 +100,12 @@
 		4D18971B223F32D30089A8F4 /* Birrung */ = {
 			isa = PBXGroup;
 			children = (
+				4D189725223F35530089A8F4 /* ViewControllers */,
+				4D18972C223F35530089A8F4 /* Views */,
+				4D189757223F361D0089A8F4 /* Extensions */,
+				4D18972B223F35530089A8F4 /* NavigationController.swift */,
+				4D189724223F35530089A8F4 /* TabBarController.swift */,
+				4D18976E223F37440089A8F4 /* Fonts.swift */,
 				4D18971C223F32D30089A8F4 /* Birrung.h */,
 				4D18971D223F32D30089A8F4 /* Info.plist */,
 			);
@@ -121,8 +121,7 @@
 				4D189729223F35530089A8F4 /* FetchedListController.swift */,
 				4D18972A223F35530089A8F4 /* CollectionViewController.swift */,
 			);
-			name = ViewControllers;
-			path = Birrung/ViewControllers;
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 		4D18972C223F35530089A8F4 /* Views */ = {
@@ -134,8 +133,7 @@
 				4D189738223F35530089A8F4 /* TableViews */,
 				4D18973D223F35530089A8F4 /* CollectionViews */,
 			);
-			name = Views;
-			path = Birrung/Views;
+			path = Views;
 			sourceTree = "<group>";
 		};
 		4D18972F223F35530089A8F4 /* Components */ = {
@@ -180,8 +178,7 @@
 				4D18975A223F361D0089A8F4 /* UIColor.swift */,
 				4D189762223F361D0089A8F4 /* UIViewController.swift */,
 			);
-			name = Extensions;
-			path = Birrung/Extensions;
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
