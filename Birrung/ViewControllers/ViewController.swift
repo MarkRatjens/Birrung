@@ -35,12 +35,7 @@ open class ViewController: UIViewController {
 		else { slideNext() }
 	}
 
-	open func reconstruct() {
-		if toolbarParts.isEmpty { navigationController?.isToolbarHidden = true }
-		else { navigationController?.isToolbarHidden = false }
-		
-		toolbarItems = toolbarParts
-	}
+	open func reconstruct() {}
 
 	open func arrange() { for s in nySubviews { s.arrange() } }
 	
@@ -78,5 +73,5 @@ open class ViewController: UIViewController {
 	public lazy var navigationBar = navigationController?.navigationBar
 	public lazy var safeGuide = view.safeAreaLayoutGuide
 	public lazy var marginsGuide = view.layoutMarginsGuide
-	open lazy var toolbarParts = [UIBarButtonItem]()
+	private var toolbarParts = { return [UIBarButtonItem]() }()
 }

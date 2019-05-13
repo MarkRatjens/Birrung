@@ -16,6 +16,8 @@ open class FetchedListController: ListViewController, NSFetchedResultsController
 			break
 		case .update:
 			break
+		@unknown default:
+			break
 		}
 	}
 	
@@ -29,6 +31,8 @@ open class FetchedListController: ListViewController, NSFetchedResultsController
 			tableView.reloadRows(at: [indexPath!], with: .fade)
 		case .move:
 			tableView.moveRow(at: indexPath!, to: newIndexPath!)
+		@unknown default:
+			break
 		}
 	}
 }
