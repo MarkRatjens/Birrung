@@ -3,7 +3,6 @@
 //  Birrung
 //
 //  Created by Mark Ratjens on 18/3/19.
-//  Copyright © 2019 Nyasa Corp. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
