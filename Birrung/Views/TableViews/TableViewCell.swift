@@ -8,6 +8,7 @@ open class TableViewCell: UITableViewCell {
 		construct()
 		delegate()
 		arrange()
+		embed()
 	}
 
 	open func arrange() { for s in nySubviews() { s.arrange() } }
@@ -19,6 +20,12 @@ open class TableViewCell: UITableViewCell {
 		selectionStyle = .none
 	}
 	
+	public func embed(controller: ViewController, in container: View) {
+		controller.view.frame = container.bounds
+		container.addSubview(controller.view)
+	}
+
+	open func embed() {}
 	open func construct() {}
 	open func delegate() {}
 	
