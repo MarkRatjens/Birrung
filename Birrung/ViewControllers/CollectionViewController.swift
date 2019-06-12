@@ -13,7 +13,12 @@ open class CollectionViewController: ViewController, UICollectionViewDelegateFlo
 		super.delegate()
 		collectionView.delegate = self
 	}
-	
+
+	open override func style() {
+		super.style()
+		collectionView.backgroundColor = .clear
+	}
+
 	open override func arrange() {
 		super.arrange()
 		collectionView.fit(in: view)
