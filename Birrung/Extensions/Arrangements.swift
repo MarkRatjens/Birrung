@@ -24,8 +24,14 @@ extension UIView {
 	public func justifyX(in outer: UILayoutGuide) { justifyX(in: outer, pad: [0]) }
 	public func justifyY(in outer: UIView) { justifyY(in: outer, pad: [0]) }
 	public func justifyY(in outer: UILayoutGuide) { justifyY(in: outer, pad: [0]) }
+	public func topLeft(in other: UIView) { topLeft(in: other, pad: [0]) }
+	public func topLeft(in other: UILayoutGuide) { topLeft(in: other, pad: [0]) }
+	public func topRight(in other: UIView) { topRight(in: other, pad: [0]) }
+	public func topRight(in other: UILayoutGuide) { topRight(in: other, pad: [0]) }
 	public func bottomLeft(in other: UIView) { bottomLeft(in: other, pad: [0]) }
 	public func bottomLeft(in other: UILayoutGuide) { bottomLeft(in: other, pad: [0]) }
+	public func bottomRight(in other: UIView) { bottomRight(in: other, pad: [0]) }
+	public func bottomRight(in other: UILayoutGuide) { bottomRight(in: other, pad: [0]) }
 	public func justifyLeft(in outer: UIView) { justifyLeft(in: outer, pad: 0) }
 	public func justifyLeft(in outer: UILayoutGuide) { justifyLeft(in: outer, pad: 0) }
 	public func justifyRight(in outer: UIView) { justifyRight(in: outer, pad: 0) }
@@ -177,7 +183,7 @@ extension UIView {
 		justifyY(in: outer, pad: [pad[0 % pad.count], pad[2 % pad.count]])
 		leftAnchor.constraint(equalTo: outer.leftAnchor, constant: pad[1 % pad.count]).isActive = true
 	}
-
+	
 	public func hangRight(in outer: UIView, pad: [CGFloat]) {
 		justifyY(in: outer, pad: [pad[0 % pad.count], pad[2 % pad.count]])
 		rightAnchor.constraint(equalTo: outer.rightAnchor, constant: -pad[1 % pad.count]).isActive = true
@@ -185,12 +191,6 @@ extension UIView {
 
 	public func hangRight(in outer: UILayoutGuide, pad: [CGFloat]) {
 		justifyY(in: outer, pad: [pad[0 % pad.count], pad[2 % pad.count]])
-		rightAnchor.constraint(equalTo: outer.rightAnchor, constant: -pad[1 % pad.count]).isActive = true
-	}
-
-	public func bottomRight(in outer: UILayoutGuide, pad: [CGFloat]) {
-		translatesAutoresizingMaskIntoConstraints = false
-		bottomAnchor.constraint(equalTo: outer.bottomAnchor, constant: -pad[0 % pad.count]).isActive = true
 		rightAnchor.constraint(equalTo: outer.rightAnchor, constant: -pad[1 % pad.count]).isActive = true
 	}
 
@@ -243,7 +243,27 @@ extension UIView {
 		centerY(with: outer)
 		justifyRight(in: outer, pad: pad)
 	}
+
+	public func topLeft(in outer: UIView, pad: [CGFloat]) {
+		justifyLeft(in: outer, pad: pad[0 % pad.count])
+		hangLoose(in: outer, pad: pad[1 % pad.count])
+	}
 	
+	public func topLeft(in outer: UILayoutGuide, pad: [CGFloat]) {
+		justifyLeft(in: outer, pad: pad[0 % pad.count])
+		hangLoose(in: outer, pad: pad[1 % pad.count])
+	}
+
+	public func topRight(in outer: UIView, pad: [CGFloat]) {
+		justifyRight(in: outer, pad: -pad[0 % pad.count])
+		hangLoose(in: outer, pad: pad[1 % pad.count])
+	}
+	
+	public func topRight(in outer: UILayoutGuide, pad: [CGFloat]) {
+		justifyRight(in: outer, pad: -pad[0 % pad.count])
+		hangLoose(in: outer, pad: pad[1 % pad.count])
+	}
+
 	public func bottomLeft(in outer: UIView, pad: [CGFloat]) {
 		justifyLeft(in: outer, pad: pad[0 % pad.count])
 		standLoose(in: outer, pad: pad[1 % pad.count])
@@ -251,6 +271,16 @@ extension UIView {
 	
 	public func bottomLeft(in outer: UILayoutGuide, pad: [CGFloat]) {
 		justifyLeft(in: outer, pad: pad[0 % pad.count])
+		standLoose(in: outer, pad: pad[1 % pad.count])
+	}
+
+	public func bottomRight(in outer: UIView, pad: [CGFloat]) {
+		justifyRight(in: outer, pad: -pad[0 % pad.count])
+		standLoose(in: outer, pad: pad[1 % pad.count])
+	}
+
+	public func bottomRight(in outer: UILayoutGuide, pad: [CGFloat]) {
+		justifyRight(in: outer, pad: -pad[0 % pad.count])
 		standLoose(in: outer, pad: pad[1 % pad.count])
 	}
 
