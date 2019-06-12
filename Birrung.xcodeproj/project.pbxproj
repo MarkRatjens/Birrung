@@ -36,6 +36,7 @@
 		4D18976D223F361D0089A8F4 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D189762223F361D0089A8F4 /* UIViewController.swift */; };
 		4D18976F223F37440089A8F4 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D18976E223F37440089A8F4 /* Fonts.swift */; };
 		4D9362EC229E151000CC761A /* DetailViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9362EB229E151000CC761A /* DetailViewCell.swift */; };
+		4DD9D57722B097BB003AE393 /* UIStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DD9D57622B097BB003AE393 /* UIStackView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -70,6 +71,7 @@
 		4D189762223F361D0089A8F4 /* UIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		4D18976E223F37440089A8F4 /* Fonts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Fonts.swift; path = Birrung/Fonts.swift; sourceTree = SOURCE_ROOT; };
 		4D9362EB229E151000CC761A /* DetailViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewCell.swift; sourceTree = "<group>"; };
+		4DD9D57622B097BB003AE393 /* UIStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStackView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -180,6 +182,7 @@
 				4D189759223F361D0089A8F4 /* Arrangements.swift */,
 				4D18975A223F361D0089A8F4 /* UIColor.swift */,
 				4D189762223F361D0089A8F4 /* UIViewController.swift */,
+				4DD9D57622B097BB003AE393 /* UIStackView.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -271,6 +274,7 @@
 				4D189741223F35530089A8F4 /* ViewController.swift in Sources */,
 				4D189752223F35530089A8F4 /* TableViewCell.swift in Sources */,
 				4D189756223F35530089A8F4 /* CollectionViewCell.swift in Sources */,
+				4DD9D57722B097BB003AE393 /* UIStackView.swift in Sources */,
 				4D18976D223F361D0089A8F4 /* UIViewController.swift in Sources */,
 				4D189764223F361D0089A8F4 /* Arrangements.swift in Sources */,
 				4D9362EC229E151000CC761A /* DetailViewCell.swift in Sources */,
