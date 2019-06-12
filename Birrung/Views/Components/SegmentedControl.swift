@@ -13,9 +13,11 @@ open class SegmentedControl: UISegmentedControl {
 	}
 	
 	@objc open func respond(_ sender: UISegmentedControl) {}
+	
+	public func setDefault() { selectedSegmentIndex = 0 }
 
 	open func style() {
-		layer.cornerRadius = 5
+		layer.cornerRadius = 2
 		layer.borderWidth = 1
 	}
 
