@@ -6,6 +6,7 @@ open class View: UIView {
 	public override init(frame: CGRect) {
 		super.init(frame: frame)
 		construct()
+		arrange()
 	}
 
 	open func arrange() { for s in nySubviews() { s.arrange() } }
