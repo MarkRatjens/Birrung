@@ -13,7 +13,7 @@
 		4D189742223F35530089A8F4 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D189727223F35530089A8F4 /* ListViewController.swift */; };
 		4D189743223F35530089A8F4 /* SelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D189728223F35530089A8F4 /* SelectionViewController.swift */; };
 		4D189744223F35530089A8F4 /* FetchedListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D189729223F35530089A8F4 /* FetchedListController.swift */; };
-		4D189745223F35530089A8F4 /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D18972A223F35530089A8F4 /* CollectionViewController.swift */; };
+		4D189745223F35530089A8F4 /* GridViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D18972A223F35530089A8F4 /* GridViewController.swift */; };
 		4D189746223F35530089A8F4 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D18972B223F35530089A8F4 /* NavigationController.swift */; };
 		4D189747223F35530089A8F4 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D18972D223F35530089A8F4 /* View.swift */; };
 		4D189748223F35530089A8F4 /* StackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D18972E223F35530089A8F4 /* StackView.swift */; };
@@ -29,8 +29,8 @@
 		4D189752223F35530089A8F4 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D18973A223F35530089A8F4 /* TableViewCell.swift */; };
 		4D189753223F35530089A8F4 /* TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D18973B223F35530089A8F4 /* TableView.swift */; };
 		4D189754223F35530089A8F4 /* ListViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D18973C223F35530089A8F4 /* ListViewCell.swift */; };
-		4D189755223F35530089A8F4 /* CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D18973E223F35530089A8F4 /* CollectionView.swift */; };
-		4D189756223F35530089A8F4 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D18973F223F35530089A8F4 /* CollectionViewCell.swift */; };
+		4D189755223F35530089A8F4 /* GridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D18973E223F35530089A8F4 /* GridView.swift */; };
+		4D189756223F35530089A8F4 /* GridViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D18973F223F35530089A8F4 /* GridViewCell.swift */; };
 		4D189764223F361D0089A8F4 /* Arrangements.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D189759223F361D0089A8F4 /* Arrangements.swift */; };
 		4D189765223F361D0089A8F4 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D18975A223F361D0089A8F4 /* UIColor.swift */; };
 		4D18976D223F361D0089A8F4 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D189762223F361D0089A8F4 /* UIViewController.swift */; };
@@ -49,7 +49,7 @@
 		4D189727223F35530089A8F4 /* ListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		4D189728223F35530089A8F4 /* SelectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectionViewController.swift; sourceTree = "<group>"; };
 		4D189729223F35530089A8F4 /* FetchedListController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FetchedListController.swift; sourceTree = "<group>"; };
-		4D18972A223F35530089A8F4 /* CollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
+		4D18972A223F35530089A8F4 /* GridViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GridViewController.swift; sourceTree = "<group>"; };
 		4D18972B223F35530089A8F4 /* NavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
 		4D18972D223F35530089A8F4 /* View.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
 		4D18972E223F35530089A8F4 /* StackView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StackView.swift; sourceTree = "<group>"; };
@@ -65,8 +65,8 @@
 		4D18973A223F35530089A8F4 /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		4D18973B223F35530089A8F4 /* TableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableView.swift; sourceTree = "<group>"; };
 		4D18973C223F35530089A8F4 /* ListViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListViewCell.swift; sourceTree = "<group>"; };
-		4D18973E223F35530089A8F4 /* CollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionView.swift; sourceTree = "<group>"; };
-		4D18973F223F35530089A8F4 /* CollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		4D18973E223F35530089A8F4 /* GridView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GridView.swift; sourceTree = "<group>"; };
+		4D18973F223F35530089A8F4 /* GridViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GridViewCell.swift; sourceTree = "<group>"; };
 		4D189759223F361D0089A8F4 /* Arrangements.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Arrangements.swift; sourceTree = "<group>"; };
 		4D18975A223F361D0089A8F4 /* UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		4D189762223F361D0089A8F4 /* UIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
@@ -125,7 +125,7 @@
 				4D189727223F35530089A8F4 /* ListViewController.swift */,
 				4D189728223F35530089A8F4 /* SelectionViewController.swift */,
 				4D189729223F35530089A8F4 /* FetchedListController.swift */,
-				4D18972A223F35530089A8F4 /* CollectionViewController.swift */,
+				4D18972A223F35530089A8F4 /* GridViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -173,8 +173,8 @@
 		4D18973D223F35530089A8F4 /* CollectionViews */ = {
 			isa = PBXGroup;
 			children = (
-				4D18973E223F35530089A8F4 /* CollectionView.swift */,
-				4D18973F223F35530089A8F4 /* CollectionViewCell.swift */,
+				4D18973E223F35530089A8F4 /* GridView.swift */,
+				4D18973F223F35530089A8F4 /* GridViewCell.swift */,
 			);
 			path = CollectionViews;
 			sourceTree = "<group>";
@@ -273,10 +273,10 @@
 				4D189747223F35530089A8F4 /* View.swift in Sources */,
 				4D189753223F35530089A8F4 /* TableView.swift in Sources */,
 				4D189750223F35530089A8F4 /* FloatingButton.swift in Sources */,
-				4D189745223F35530089A8F4 /* CollectionViewController.swift in Sources */,
+				4D189745223F35530089A8F4 /* GridViewController.swift in Sources */,
 				4D189741223F35530089A8F4 /* ViewController.swift in Sources */,
 				4D189752223F35530089A8F4 /* TableViewCell.swift in Sources */,
-				4D189756223F35530089A8F4 /* CollectionViewCell.swift in Sources */,
+				4D189756223F35530089A8F4 /* GridViewCell.swift in Sources */,
 				4DD9D57722B097BB003AE393 /* UIStackView.swift in Sources */,
 				4D18976D223F361D0089A8F4 /* UIViewController.swift in Sources */,
 				4D189764223F361D0089A8F4 /* Arrangements.swift in Sources */,
@@ -297,7 +297,7 @@
 				4D18974E223F35530089A8F4 /* ViewDataSource.swift in Sources */,
 				4D189749223F35530089A8F4 /* Label.swift in Sources */,
 				4D18974B223F35530089A8F4 /* SegmentedControl.swift in Sources */,
-				4D189755223F35530089A8F4 /* CollectionView.swift in Sources */,
+				4D189755223F35530089A8F4 /* GridView.swift in Sources */,
 				4DD9D57122AF497B003AE393 /* ScrollView.swift in Sources */,
 				4D189742223F35530089A8F4 /* ListViewController.swift in Sources */,
 			);

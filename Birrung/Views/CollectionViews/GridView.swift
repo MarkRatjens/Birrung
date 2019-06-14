@@ -1,6 +1,6 @@
 import UIKit
 
-open class CollectionView: UICollectionView {
+open class GridView: UICollectionView {
 	public override init(frame: CGRect, collectionViewLayout: UICollectionViewLayout) {
 		super.init(frame: frame, collectionViewLayout: collectionViewLayout)
 		construct()
