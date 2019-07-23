@@ -24,8 +24,8 @@ open class GridViewController: ViewController, UICollectionViewDelegateFlowLayou
 		collectionView.backgroundColor = .clear
 	}
 
-	open override func restyle() {
-		super.restyle()
+	open override func refill() {
+		super.refill()
 		if let ips = collectionView.indexPathsForSelectedItems {
 			for ip in ips { collectionView.deselectItem(at: ip, animated: true) }
 			collectionView.reloadItems(at: ips)
