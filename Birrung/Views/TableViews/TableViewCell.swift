@@ -12,13 +12,9 @@ open class TableViewCell: UITableViewCell {
 	}
 
 	open func arrange() { for s in nySubviews() { s.arrange() } }
-
 	open func fill() { style() }
 
-	open func style() {
-		for s in nySubviews() { s.style() }
-		selectionStyle = .none
-	}
+	open func style() { selectionStyle = .none }
 	
 	public func embed(controller: ViewController, in container: View) {
 		controller.view.frame = container.bounds

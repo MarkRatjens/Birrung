@@ -5,14 +5,13 @@ open class GridViewCell: UICollectionViewCell {
 		super.init(frame: frame)
 		construct()
 		arrange()
-		style()
 	}
 
 	open func arrange() { for s in nySubviews() { s.arrange() } }
-	open func style() { for s in nySubviews() { s.style() } }
+	open func fill() { style() }
+	open func style() {}
 
 	open func construct() {}
-	open func fill() {}
 	
 	func nySubviews() -> [View] { return contentView.subviews.compactMap { $0 as? View } }
 
