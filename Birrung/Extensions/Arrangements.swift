@@ -59,6 +59,11 @@ extension UIView {
 		centerY(with: other)
 	}
 
+	public func center(with other: UILayoutGuide) {
+		centerX(with: other)
+		centerY(with: other)
+	}
+
 	public func centerX(with other: UIView) {
 		translatesAutoresizingMaskIntoConstraints = false
 		centerXAnchor.constraint(equalTo: other.centerXAnchor).isActive = true
