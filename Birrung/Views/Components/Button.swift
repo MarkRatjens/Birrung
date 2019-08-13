@@ -15,10 +15,10 @@ open class Button: UIButton {
 	
 	@objc func respondToTouch(_ sender: CheckBox) {
 		isSelected = !isSelected
-		if let c = completeTouch { c(isSelected) }
+		if let c = completeTouch { c(self) }
 	}
 	
-	public var completeTouch: ((Bool) -> Void)?
+	public var completeTouch: ((Button) -> Void)?
 
 	open func style() {}
 	open func arrange() {}
