@@ -18,7 +18,8 @@ open class TextEntryCell: TableViewCell {
 		stack.fit(in: contentView, pad: [12, 8])
 	}
 
-	open func withdraw(_ text: String?) {}
+	open func committing(_ text: String?) {}
+	open func cancelling(_ text: String?) {}
 
 	var stack = VerticalStack()
 }
@@ -31,6 +32,14 @@ extension TextEntryCell: UITextFieldDelegate {
 	}
 	
 	open func textFieldDidEndEditing(_ textField: UITextField) {
-		withdraw(textField.text)
+		cancelling(textField.text)
+	}
+	
+	open func textFieldDidEndEditing(_ textField: UITextField, reason: UITextField.DidEndEditingReason) {
+		switch reason {
+			case .committed: committing(textField.text)
+			case .cancelled: cancelling(textField.text)
+			default: break
+		}
 	}
 }
