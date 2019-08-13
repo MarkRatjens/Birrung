@@ -47,5 +47,6 @@ public struct Fonts {
 		case on = "\u{e336}"
 		case off = "\u{e888}"
 		case request = "\u{e8b3}"
+		case check = "\u{e5ca}"
 	}
 }
