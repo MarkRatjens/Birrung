@@ -1,23 +1,11 @@
 import UIKit
 
 open class CheckBox: Button {
-	
-	open override func construct() {
-		super.construct()
-		addTarget(self, action: #selector(respondToTouch(_:)), for: .touchUpInside)
-	}
 
-	@objc func respondToTouch(_ sender: CheckBox) {
-		toggle()
-	}
-	
-	public func toggle() {
-		if isSelected {
-			setAttributedTitle(blank, for: .normal)
-			isSelected = false
-		} else {
-			setAttributedTitle(check, for: .normal)
-			isSelected = true
+	override open var isSelected: Bool { didSet
+		{
+			if isSelected { setAttributedTitle(check, for: .normal) }
+			else { setAttributedTitle(blank, for: .normal) }
 		}
 	}
 

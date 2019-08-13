@@ -9,8 +9,18 @@ open class Button: UIButton {
 		fill()
 	}
 	
+	open  func construct() {
+		addTarget(self, action: #selector(respondToTouch(_:)), for: .touchUpInside)
+	}
+	
+	@objc func respondToTouch(_ sender: CheckBox) {
+		isSelected = !isSelected
+		if let c = completeTouch { c(isSelected) }
+	}
+	
+	public var completeTouch: ((Bool) -> Void)?
+
 	open func style() {}
-	open func construct() {}
 	open func arrange() {}
 	open func fill() {}
 	
