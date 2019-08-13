@@ -12,7 +12,7 @@ open class FloatingButton: Button {
 		super.style()
 		layer.cornerRadius = 32
 		layer.borderWidth = 4
-		titleLabel?.textAlignment = NSTextAlignment.center
+		titleLabel?.textAlignment = .center
 	}
 	
 	open override func fill() {
