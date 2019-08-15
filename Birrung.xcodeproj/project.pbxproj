@@ -32,7 +32,6 @@
 		4D189755223F35530089A8F4 /* GridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D18973E223F35530089A8F4 /* GridView.swift */; };
 		4D189756223F35530089A8F4 /* GridViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D18973F223F35530089A8F4 /* GridViewCell.swift */; };
 		4D189764223F361D0089A8F4 /* Arrangements.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D189759223F361D0089A8F4 /* Arrangements.swift */; };
-		4D189765223F361D0089A8F4 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D18975A223F361D0089A8F4 /* UIColor.swift */; };
 		4D18976D223F361D0089A8F4 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D189762223F361D0089A8F4 /* UIViewController.swift */; };
 		4D18976F223F37440089A8F4 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D18976E223F37440089A8F4 /* Fonts.swift */; };
 		4D8A27BA2304E21800C3BE51 /* Theming.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8A27B92304E21800C3BE51 /* Theming.swift */; };
@@ -70,7 +69,6 @@
 		4D18973E223F35530089A8F4 /* GridView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GridView.swift; sourceTree = "<group>"; };
 		4D18973F223F35530089A8F4 /* GridViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GridViewCell.swift; sourceTree = "<group>"; };
 		4D189759223F361D0089A8F4 /* Arrangements.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Arrangements.swift; sourceTree = "<group>"; };
-		4D18975A223F361D0089A8F4 /* UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		4D189762223F361D0089A8F4 /* UIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		4D18976E223F37440089A8F4 /* Fonts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Fonts.swift; path = Birrung/Fonts.swift; sourceTree = SOURCE_ROOT; };
 		4D8A27B92304E21800C3BE51 /* Theming.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theming.swift; sourceTree = "<group>"; };
@@ -189,7 +187,6 @@
 			isa = PBXGroup;
 			children = (
 				4D189759223F361D0089A8F4 /* Arrangements.swift */,
-				4D18975A223F361D0089A8F4 /* UIColor.swift */,
 				4D189762223F361D0089A8F4 /* UIViewController.swift */,
 				4DD9D57622B097BB003AE393 /* UIStackView.swift */,
 			);
@@ -288,7 +285,6 @@
 				4D189764223F361D0089A8F4 /* Arrangements.swift in Sources */,
 				4D9362EC229E151000CC761A /* DetailViewCell.swift in Sources */,
 				4D18974F223F35530089A8F4 /* Button.swift in Sources */,
-				4D189765223F361D0089A8F4 /* UIColor.swift in Sources */,
 				4D189744223F35530089A8F4 /* FetchedListController.swift in Sources */,
 				4D18974A223F35530089A8F4 /* FloatingButtons.swift in Sources */,
 				4D18974C223F35530089A8F4 /* TextField.swift in Sources */,
