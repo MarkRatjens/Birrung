@@ -35,6 +35,7 @@
 		4D189765223F361D0089A8F4 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D18975A223F361D0089A8F4 /* UIColor.swift */; };
 		4D18976D223F361D0089A8F4 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D189762223F361D0089A8F4 /* UIViewController.swift */; };
 		4D18976F223F37440089A8F4 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D18976E223F37440089A8F4 /* Fonts.swift */; };
+		4D8A27BA2304E21800C3BE51 /* Theming.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8A27B92304E21800C3BE51 /* Theming.swift */; };
 		4D9362EC229E151000CC761A /* DetailViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9362EB229E151000CC761A /* DetailViewCell.swift */; };
 		4DD767B323014BC200FE3864 /* CheckBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DD767B223014BC200FE3864 /* CheckBox.swift */; };
 		4DD9D57122AF497B003AE393 /* ScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DD9D57022AF497B003AE393 /* ScrollView.swift */; };
@@ -72,6 +73,7 @@
 		4D18975A223F361D0089A8F4 /* UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		4D189762223F361D0089A8F4 /* UIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		4D18976E223F37440089A8F4 /* Fonts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Fonts.swift; path = Birrung/Fonts.swift; sourceTree = SOURCE_ROOT; };
+		4D8A27B92304E21800C3BE51 /* Theming.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theming.swift; sourceTree = "<group>"; };
 		4D9362EB229E151000CC761A /* DetailViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewCell.swift; sourceTree = "<group>"; };
 		4DD767B223014BC200FE3864 /* CheckBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckBox.swift; sourceTree = "<group>"; };
 		4DD9D57022AF497B003AE393 /* ScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollView.swift; sourceTree = "<group>"; };
@@ -116,6 +118,7 @@
 				4D18976E223F37440089A8F4 /* Fonts.swift */,
 				4D18971C223F32D30089A8F4 /* Birrung.h */,
 				4D18971D223F32D30089A8F4 /* Info.plist */,
+				4D8A27B92304E21800C3BE51 /* Theming.swift */,
 			);
 			path = Birrung;
 			sourceTree = "<group>";
@@ -148,15 +151,15 @@
 		4D18972F223F35530089A8F4 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				4D189730223F35530089A8F4 /* Label.swift */,
 				4D189731223F35530089A8F4 /* FloatingButtons.swift */,
-				4D189732223F35530089A8F4 /* SegmentedControl.swift */,
-				4D189733223F35530089A8F4 /* TextField.swift */,
-				4D189734223F35530089A8F4 /* ToggleButton.swift */,
-				4D189735223F35530089A8F4 /* ViewDataSource.swift */,
-				4D189736223F35530089A8F4 /* Button.swift */,
 				4D189737223F35530089A8F4 /* FloatingButton.swift */,
+				4D189734223F35530089A8F4 /* ToggleButton.swift */,
 				4DD767B223014BC200FE3864 /* CheckBox.swift */,
+				4D189730223F35530089A8F4 /* Label.swift */,
+				4D189733223F35530089A8F4 /* TextField.swift */,
+				4D189736223F35530089A8F4 /* Button.swift */,
+				4D189732223F35530089A8F4 /* SegmentedControl.swift */,
+				4D189735223F35530089A8F4 /* ViewDataSource.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -293,6 +296,7 @@
 				4D18976F223F37440089A8F4 /* Fonts.swift in Sources */,
 				4D18974D223F35530089A8F4 /* ToggleButton.swift in Sources */,
 				4D189748223F35530089A8F4 /* StackView.swift in Sources */,
+				4D8A27BA2304E21800C3BE51 /* Theming.swift in Sources */,
 				4D189754223F35530089A8F4 /* ListViewCell.swift in Sources */,
 				4D189740223F35530089A8F4 /* TabBarController.swift in Sources */,
 				4D189746223F35530089A8F4 /* NavigationController.swift in Sources */,
