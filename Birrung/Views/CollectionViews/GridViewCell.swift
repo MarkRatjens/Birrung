@@ -13,7 +13,7 @@ open class GridViewCell: UICollectionViewCell {
 
 	open func construct() {}
 	
-	func nySubviews() -> [View] { return contentView.subviews.compactMap { $0 as? View } }
+	public func nySubviews() -> [View] { return contentView.subviews.compactMap { $0 as? View } }
 
 	public required init?(coder aDecoder: NSCoder) { super.init(coder: aDecoder) }
 }

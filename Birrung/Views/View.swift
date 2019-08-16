@@ -13,7 +13,7 @@ open class View: UIView {
 	open func fill() { style() }
 	open func style() {}
 
-	func nySubviews() -> [X] { return subviews.compactMap { $0 as? X } }
+	public func nySubviews() -> [X] { return subviews.compactMap { $0 as? X } }
 	
 	open func construct() {}
 	

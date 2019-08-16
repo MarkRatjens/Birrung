@@ -25,7 +25,7 @@ open class TableViewCell: UITableViewCell {
 	open func construct() {}
 	open func delegate() {}
 	
-	func nySubviews() -> [View] { return contentView.subviews.compactMap { $0 as? View } }
+	public func nySubviews() -> [View] { return contentView.subviews.compactMap { $0 as? View } }
 
 	open var viewController: UIViewController? { return ((superview as? UITableView)?.delegate as? UIViewController) }	
 	

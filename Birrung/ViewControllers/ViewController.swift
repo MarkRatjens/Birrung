@@ -47,7 +47,7 @@ open class ViewController: UIViewController {
 		return r
 	}
 	
-	var nySubviews: [View] { return view.subviews.compactMap { $0 as? View } }
+	public var nySubviews: [View] { return view.subviews.compactMap { $0 as? View } }
 
 	open func embed() {}
 	
