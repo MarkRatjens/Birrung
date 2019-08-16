@@ -19,10 +19,19 @@ open class Button: UIButton {
 	}
 	
 	public var completeTouch: ((Button) -> Void)?
+	
+	open func style() {
+		if let t = theme {
+			titleLabel?.textColor = t.text
+			setTitleColor(t.text, for: .normal)
+		}
+		titleLabel?.font =  UIFont.systemFont(ofSize: 12)
+	}
 
-	open func style() {}
 	open func arrange() {}
 	open func fill() {}
 	
+	public var theme: Theme?
+
 	public required init?(coder aDecoder: NSCoder) { super.init(coder: aDecoder) }
 }
