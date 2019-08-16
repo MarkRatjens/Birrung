@@ -8,6 +8,8 @@ extension UIView {
 	public func hang(in outer: UILayoutGuide) { hang(in: outer, pad: [0]) }
 	public func stand(in outer: UIView) { stand(in: outer, pad: [0]) }
 	public func stand(in outer: UILayoutGuide) { stand(in: outer, pad: [0]) }
+	public func hang(under other: UIView) { link(under: other, pad: 0) }
+	public func stand(on other: UIView) { link(over: other, pad: 0) }
 	public func hangLoose(in outer: UIView) { hangLoose(in: outer, pad: 0) }
 	public func hangLoose(in outer: UILayoutGuide) { hangLoose(in: outer, pad: 0) }
 	public func standLoose(in outer: UIView) { standLoose(in: outer, pad: 0) }
@@ -41,6 +43,7 @@ extension UIView {
 	public func centerLeft(in other: UILayoutGuide) { centerLeft(in: other, pad: 0) }
 	public func centerRight(in other: UILayoutGuide) { centerRight(in: other, pad: 0) }
 	public func link(under other: UIView) { link(under: other, pad: 0) }
+	public func link(over other: UIView) { link(over: other, pad: 0) }
 	public func link(after other: UIView) { link(after: other, pad: 0) }
 	public func link(before other: UIView) { link(before: other, pad: 0) }
 
@@ -139,6 +142,9 @@ extension UIView {
 		topAnchor.constraint(equalTo: outer.topAnchor, constant: pad[1 % pad.count]).isActive = true
 	}
 	
+	public func hang(under other: UIView, pad: CGFloat) { link(under: other, pad: pad) }
+	public func stand(on other: UIView, pad: CGFloat) { link(over: other, pad: pad ) }
+
 	public func standLoose(in outer: UIView, pad: CGFloat) {
 		translatesAutoresizingMaskIntoConstraints = false
 		bottomAnchor.constraint(equalTo: outer.bottomAnchor, constant: -pad).isActive = true
@@ -280,12 +286,12 @@ extension UIView {
 	}
 
 	public func bottomRight(in outer: UIView, pad: [CGFloat]) {
-		justifyRight(in: outer, pad: -pad[0 % pad.count])
+		justifyRight(in: outer, pad: pad[0 % pad.count])
 		standLoose(in: outer, pad: pad[1 % pad.count])
 	}
 
 	public func bottomRight(in outer: UILayoutGuide, pad: [CGFloat]) {
-		justifyRight(in: outer, pad: -pad[0 % pad.count])
+		justifyRight(in: outer, pad: pad[0 % pad.count])
 		standLoose(in: outer, pad: pad[1 % pad.count])
 	}
 
@@ -306,6 +312,11 @@ extension UIView {
 		topAnchor.constraint(equalTo: other.bottomAnchor, constant: pad).isActive = true
 	}
 	
+	public func link(over other: UIView, pad: CGFloat) {
+		translatesAutoresizingMaskIntoConstraints = false
+		bottomAnchor.constraint(equalTo: other.topAnchor, constant: pad).isActive = true
+	}
+
 	public func link(after other: UIView, pad: CGFloat) {
 		translatesAutoresizingMaskIntoConstraints = false
 		leftAnchor.constraint(equalTo: other.rightAnchor, constant: pad).isActive = true
