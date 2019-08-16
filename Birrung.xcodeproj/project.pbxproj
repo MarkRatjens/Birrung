@@ -36,10 +36,21 @@
 		4D18976F223F37440089A8F4 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D18976E223F37440089A8F4 /* Fonts.swift */; };
 		4D8A27BA2304E21800C3BE51 /* Theming.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8A27B92304E21800C3BE51 /* Theming.swift */; };
 		4D9362EC229E151000CC761A /* DetailViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9362EB229E151000CC761A /* DetailViewCell.swift */; };
+		4DB31B7123064FA8006B9343 /* Yarngun.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DB31B6F23064F9A006B9343 /* Yarngun.framework */; };
 		4DD767B323014BC200FE3864 /* CheckBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DD767B223014BC200FE3864 /* CheckBox.swift */; };
 		4DD9D57122AF497B003AE393 /* ScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DD9D57022AF497B003AE393 /* ScrollView.swift */; };
 		4DD9D57722B097BB003AE393 /* UIStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DD9D57622B097BB003AE393 /* UIStackView.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4DB31B6E23064F9A006B9343 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4DB31B6A23064F9A006B9343 /* Yarngun.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 4D6672A02241C59400AB0596;
+			remoteInfo = Yarngun;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		4D189719223F32D30089A8F4 /* Birrung.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Birrung.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -73,6 +84,7 @@
 		4D18976E223F37440089A8F4 /* Fonts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Fonts.swift; path = Birrung/Fonts.swift; sourceTree = SOURCE_ROOT; };
 		4D8A27B92304E21800C3BE51 /* Theming.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theming.swift; sourceTree = "<group>"; };
 		4D9362EB229E151000CC761A /* DetailViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewCell.swift; sourceTree = "<group>"; };
+		4DB31B6A23064F9A006B9343 /* Yarngun.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Yarngun.xcodeproj; path = ../Yarngun/Yarngun.xcodeproj; sourceTree = "<group>"; };
 		4DD767B223014BC200FE3864 /* CheckBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckBox.swift; sourceTree = "<group>"; };
 		4DD9D57022AF497B003AE393 /* ScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollView.swift; sourceTree = "<group>"; };
 		4DD9D57622B097BB003AE393 /* UIStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStackView.swift; sourceTree = "<group>"; };
@@ -83,6 +95,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4DB31B7123064FA8006B9343 /* Yarngun.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,6 +107,8 @@
 			children = (
 				4D18971B223F32D30089A8F4 /* Birrung */,
 				4D18971A223F32D30089A8F4 /* Products */,
+				4DB31B6A23064F9A006B9343 /* Yarngun.xcodeproj */,
+				4DB31B7023064FA8006B9343 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -193,6 +208,21 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		4DB31B6B23064F9A006B9343 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4DB31B6F23064F9A006B9343 /* Yarngun.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4DB31B7023064FA8006B9343 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -251,12 +281,28 @@
 			mainGroup = 4D18970F223F32D30089A8F4;
 			productRefGroup = 4D18971A223F32D30089A8F4 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 4DB31B6B23064F9A006B9343 /* Products */;
+					ProjectRef = 4DB31B6A23064F9A006B9343 /* Yarngun.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				4D189718223F32D30089A8F4 /* Birrung */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		4DB31B6F23064F9A006B9343 /* Yarngun.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Yarngun.framework;
+			remoteRef = 4DB31B6E23064F9A006B9343 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		4D189717223F32D30089A8F4 /* Resources */ = {
