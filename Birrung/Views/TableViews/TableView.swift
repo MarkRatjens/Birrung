@@ -10,7 +10,7 @@ open class TableView: UITableView {
 	
 	open func construct() {}
 	open func arrange() {}
-	open func style() {}
+	open func style() { backgroundColor = .clear }
 	open func fill() {}
 	
 	public required init?(coder aDecoder: NSCoder) { super.init(coder: aDecoder) }
