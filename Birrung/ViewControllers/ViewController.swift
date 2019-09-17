@@ -18,6 +18,7 @@ open class ViewController: UIViewController {
 		style()
 		guide()
 		embed()
+		log()
 	}
 	
 	open override func viewWillAppear(_ animated: Bool) {
@@ -27,6 +28,7 @@ open class ViewController: UIViewController {
 		refill()
 		restyle()
 		reguide()
+		relog()
 	}
 
 	open override func viewWillDisappear(_ animated: Bool) {
@@ -63,12 +65,14 @@ open class ViewController: UIViewController {
 	open func guide() {}
 	open func construct() {}
 	open func style() {}
+	open func log() {}
 	open func restyle() {}
 	open func refill() {}
 	open func redelegate() {}
 	open func reguide() {}
 	open func slideNext() {}
 	open func slideBack() {}
+	open func relog() {}
 
 	public lazy var navigationBar = navigationController?.navigationBar
 	public lazy var safeGuide = view.safeAreaLayoutGuide
