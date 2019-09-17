@@ -15,7 +15,7 @@ open class ListViewController: ViewController, UITableViewDelegate {
 	
 	open override func arrange() {
 		super.arrange()
-		tableView.fit(in: view)
+		tableView.fit(in: safeGuide)
 	}
 
 	open override func style() {
