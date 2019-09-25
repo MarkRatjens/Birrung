@@ -1,13 +1,6 @@
 import UIKit
 
 open class ViewController: UIViewController {
-	public var prefersLargeTitles: Bool = false {
-		didSet {
-			if let b = navigationBar {
-				b.prefersLargeTitles = prefersLargeTitles
-			}
-		}
-	}
 
 	open override func viewDidLoad() {
 		super.viewDidLoad()
@@ -40,7 +33,15 @@ open class ViewController: UIViewController {
 	open func reconstruct() {}
 
 	open func arrange() { for s in nySubviews { s.arrange() } }
-	
+
+	public var prefersLargeTitles: Bool = false {
+		didSet {
+			if let b = navigationBar {
+				b.prefersLargeTitles = prefersLargeTitles
+			}
+		}
+	}
+
 	public var contained: Bool {
 		var r = false
 		if let p = self.parent {
@@ -52,13 +53,6 @@ open class ViewController: UIViewController {
 	public var nySubviews: [View] { return view.subviews.compactMap { $0 as? View } }
 
 	open func embed() {}
-	
-	public func embed(controller: ViewController, in container: View) {
-		addChild(controller)
-		controller.view.frame = container.bounds
-		container.addSubview(controller.view)
-		controller.didMove(toParent: self)
-	}
 
 	open func fill() {}
 	open func delegate() {}
@@ -73,7 +67,7 @@ open class ViewController: UIViewController {
 	open func slideNext() {}
 	open func slideBack() {}
 	open func relog() {}
-
+	
 	public lazy var navigationBar = navigationController?.navigationBar
 	public lazy var safeGuide = view.safeAreaLayoutGuide
 	public lazy var marginsGuide = view.layoutMarginsGuide

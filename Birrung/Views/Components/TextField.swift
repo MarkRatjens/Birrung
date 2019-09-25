@@ -47,9 +47,6 @@ extension TextField: UITextFieldDelegate {
 	open func textFieldDidEndEditing(_ textField: UITextField) { cancelling() }
 	
 	open func textFieldDidEndEditing(_ textField: UITextField, reason: UITextField.DidEndEditingReason) {
-		print(textField)
-		print(self)
-		print(self == textField)
 		switch reason {
 			case .committed: committing()
 			case .cancelled: cancelling()
