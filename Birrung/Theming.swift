@@ -2,10 +2,10 @@ import UIKit
 import Yarngun
 
 open class ThemeSet {
-	public static var dark = instance.dark
-	public static var light = instance.light
+	public static var dark = ace.dark
+	public static var light = ace.light
 
-	public static var instance = ThemeSet()
+	public static var ace = ThemeSet()
 	
 	public var sets = [String: Theme]()
 	
