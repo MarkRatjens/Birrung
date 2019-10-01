@@ -266,12 +266,12 @@ extension UIView {
 	}
 
 	public func topRight(in outer: UIView, pad: [CGFloat]) {
-		justifyRight(in: outer, pad: -pad[0 % pad.count])
+		justifyRight(in: outer, pad: pad[0 % pad.count])
 		hangLoose(in: outer, pad: pad[1 % pad.count])
 	}
 	
 	public func topRight(in outer: UILayoutGuide, pad: [CGFloat]) {
-		justifyRight(in: outer, pad: -pad[0 % pad.count])
+		justifyRight(in: outer, pad: pad[0 % pad.count])
 		hangLoose(in: outer, pad: pad[1 % pad.count])
 	}
 
