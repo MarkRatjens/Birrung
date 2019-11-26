@@ -16,6 +16,13 @@ open class View: UIView {
 	public func nySubviews() -> [X] { return subviews.compactMap { $0 as? X } }
 	
 	open func construct() {}
+
+	public func doNothingOnTap() {
+		let gr = UITapGestureRecognizer(target: self, action: #selector(self.doNothing(_:)))
+		addGestureRecognizer(gr)
+	}
+
+	@objc public func doNothing(_ sender: Any? = nil) {}
 	
 	public required init?(coder aDecoder: NSCoder) { super.init(coder: aDecoder) }
 }
