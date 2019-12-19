@@ -4,13 +4,13 @@ open class GridViewController: ViewController, UICollectionViewDelegateFlowLayou
 	public var collectionView: GridView!
 
 	open override func construct() {
-		super.construct()
 		collectionView = GridView(frame: view.frame, collectionViewLayout: layout)
 		view.addSubview(collectionView)
+		super.construct()
 	}
 	
-	open override func delegate() {
-		super.delegate()
+	open override func associate() {
+		super.associate()
 		collectionView.delegate = self
 	}
 
@@ -19,13 +19,13 @@ open class GridViewController: ViewController, UICollectionViewDelegateFlowLayou
 		collectionView.fit(in: view)
 	}
 
-	open override func style() {
-		super.style()
+	open override func craft() {
+		super.craft()
 		collectionView.backgroundColor = .clear
 	}
 
-	open override func refill() {
-		super.refill()
+	open override func reshow() {
+		super.reshow()
 		if let ips = collectionView.indexPathsForSelectedItems {
 			for ip in ips { collectionView.deselectItem(at: ip, animated: true) }
 			collectionView.reloadItems(at: ips)

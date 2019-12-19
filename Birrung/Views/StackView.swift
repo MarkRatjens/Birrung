@@ -1,24 +1,27 @@
 import UIKit
 
 open class StackView: UIStackView {
-	public override init(frame: CGRect) {
-		super.init(frame: frame)
-		construct()
-		arrange()
-		style()
-	}
+	public weak var navigator: Navigator? { didSet { navigate() } }
+}
 	
-	open func arrange() {
+extension StackView: Component {
+	@objc open func construct() { for c in components { c.construct() } }
+	@objc open func associate() { for c in components { c.associate() } }
+	@objc open func craft() { for c in components { c.craft() } }
+	@objc open func navigate() { for c in components { c.navigator = navigator } }
+
+	@objc open func arrange() {
+		for c in components { c.arrange() }
 		alignment = .fill
 		spacing = 0
 	}
 
-	open func construct() {}
-	open func style() {}
-	open func fill() {}
+	@objc open func show() {}
 
-	public required init(coder aDecoder: NSCoder) { super.init(coder: aDecoder) }
+	public var components: [Component] { return subviews.compactMap { $0 as? Component } }
 }
+
+
 
 
 open class HorizontalStack: StackView {
@@ -28,6 +31,8 @@ open class HorizontalStack: StackView {
 		distribution = .equalCentering
 	}
 }
+
+
 
 
 open class VerticalStack: StackView {

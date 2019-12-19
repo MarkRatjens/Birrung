@@ -1,27 +1,17 @@
 import UIKit
 
 open class ViewController: UIViewController {
-
+	
 	open override func viewDidLoad() {
 		super.viewDidLoad()
-		construct()
-		delegate()
-		fill()
-		arrange()
-		style()
+		assemble()
 		guide()
-		embed()
 		log()
 	}
 	
 	open override func viewWillAppear(_ animated: Bool) {
 		super.viewWillAppear(animated)
-		reconstruct()
-		redelegate()
-		refill()
-		restyle()
-		reguide()
-		relog()
+		reshow()
 	}
 
 	open override func viewWillDisappear(_ animated: Bool) {
@@ -30,18 +20,35 @@ open class ViewController: UIViewController {
 		else { slideNext() }
 	}
 
-	open func reconstruct() {}
-
-	open func arrange() { for s in nySubviews { s.arrange() } }
-
-	public var prefersLargeTitles: Bool = false {
-		didSet {
-			if let b = navigationBar {
-				b.prefersLargeTitles = prefersLargeTitles
-			}
-		}
+	open func assemble() {
+		navigator = self
+		construct()
+		associate()
+		show()
+		arrange()
+		craft()
+		embed()
 	}
+	
+	public weak var navigator: Navigator? { didSet { navigate() } }
 
+	open func guide() {}
+	open func embed() {}
+	open func log() {}
+
+	open func slideNext() {}
+	open func slideBack() {}
+
+	public lazy var navigationBar = navigationController?.navigationBar
+	public lazy var safeGuide = view.safeAreaLayoutGuide
+	public lazy var marginsGuide = view.layoutMarginsGuide
+	private var toolbarParts = { return [UIBarButtonItem]() }()
+	
+	override public func embed(controller: UIViewController, in container: UIView) {
+		if let c = controller as? ViewController { c.navigator = navigator }
+		super.embed(controller: controller, in: container)
+	}
+	
 	public var contained: Bool {
 		var r = false
 		if let p = self.parent {
@@ -50,26 +57,44 @@ open class ViewController: UIViewController {
 		return r
 	}
 	
-	public var nySubviews: [View] { return view.subviews.compactMap { $0 as? View } }
+	public var prefersLargeTitles: Bool = false {
+		didSet {
+			if let b = navigationBar {
+				b.prefersLargeTitles = prefersLargeTitles
+			}
+		}
+	}
+}
 
-	open func embed() {}
 
-	open func fill() {}
-	open func delegate() {}
-	open func guide() {}
-	open func construct() {}
-	open func style() {}
-	open func log() {}
-	open func restyle() {}
-	open func refill() {}
-	open func redelegate() {}
-	open func reguide() {}
-	open func slideNext() {}
-	open func slideBack() {}
-	open func relog() {}
+extension ViewController: Component {
+
+	@objc open func construct() { for c in components { c.construct() } }
+	@objc open func associate() { for c in components { c.associate() } }
+	@objc open func arrange() { for c in components { c.arrange() } }
+	@objc open func craft() { for c in components { c.craft() } }
+	@objc open func navigate() { for c in components { c.navigator = self } }
+
+	@objc open func show() {}
+	@objc open func reshow() {}
+
+	public var components: [Component] { return view.subviews.compactMap { $0 as? Component } }
+}
+
+
+extension ViewController: Navigator {
 	
-	public lazy var navigationBar = navigationController?.navigationBar
-	public lazy var safeGuide = view.safeAreaLayoutGuide
-	public lazy var marginsGuide = view.layoutMarginsGuide
-	private var toolbarParts = { return [UIBarButtonItem]() }()
+	open func push(_ controller: UIViewController) {
+		if let nc = navigationController { nc.pushViewController(controller, animated: true) }
+		else { navigator?.push(controller) }
+	}
+
+	open func pop() {
+		if let nc = navigationController { nc.popViewController(animated: true) }
+		else { navigator?.pop() }
+	}
+	
+	public func present(_ controller: UIViewController, animated: Bool) {
+		present( controller, animated: animated, completion: nil)
+	}
 }

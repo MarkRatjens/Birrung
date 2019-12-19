@@ -5,11 +5,11 @@ open class TextEntryCell: TableViewCell {
 	public var detail = TextField()
 
 	open override func construct() {
-		super.construct()
 		contentView.addSubview(stack)
 		stack.addArrangedSubview(title)
 		stack.addArrangedSubview(detail)
 		detail.delegate = self
+		super.construct()
 	}
 	
 	open override func arrange() {

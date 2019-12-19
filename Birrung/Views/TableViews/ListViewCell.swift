@@ -1,8 +1,8 @@
 import UIKit
 
 open class ListViewCell: TableViewCell {
-	open override func style() {
-		super.style()
+	open override func craft() {
+		super.craft()
 		contentView.backgroundColor = .clear
 		textLabel?.numberOfLines = 0
 	}

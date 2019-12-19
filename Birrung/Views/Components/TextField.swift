@@ -1,23 +1,12 @@
 import UIKit
 
 open class TextField: UITextField {
-	public override init(frame: CGRect) {
-		super.init(frame: frame)
-		delegate()
-		style()
-	}
-
-	open func delegate() { delegate = self }
 
 	open func committing() { if let t = text, let c = completeComit { c(t) } }
 	open func cancelling() { if let t = text, let c = completeCancel { c(t) } }
 	
 	public var completeComit: ((String) -> Void)?
 	public var completeCancel: ((String) -> Void)?
-	
-	open func style() {
-		borderStyle = .roundedRect
-	}
 	
 	public func addKeyboardBar(){
 		let doneToolbar: UIToolbar = UIToolbar(frame: CGRect.init(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 50))
@@ -34,19 +23,33 @@ open class TextField: UITextField {
 	}
 	
 	@objc func doneButtonAction(){ resignFirstResponder() }
-	public required init?(coder aDecoder: NSCoder) { super.init(coder: aDecoder) }
+
+	public weak var navigator: Navigator?
+}
+
+
+extension TextField: Component {
+
+	@objc open func construct() {}
+	@objc open func associate() { delegate = self }
+	@objc open func arrange() {}
+	@objc open func craft() { borderStyle = .roundedRect }
+	@objc open func show() {}
+	@objc open func navigate() {}
+
+	public var components: [Component] { return [] }
 }
 
 
 extension TextField: UITextFieldDelegate {
-	open func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+	@objc open func textFieldShouldReturn(_ textField: UITextField) -> Bool {
 		textField.resignFirstResponder()
 		return true
 	}
 	
-	open func textFieldDidEndEditing(_ textField: UITextField) { cancelling() }
+	@objc open func textFieldDidEndEditing(_ textField: UITextField) { cancelling() }
 	
-	open func textFieldDidEndEditing(_ textField: UITextField, reason: UITextField.DidEndEditingReason) {
+	@objc open func textFieldDidEndEditing(_ textField: UITextField, reason: UITextField.DidEndEditingReason) {
 		switch reason {
 			case .committed: committing()
 			case .cancelled: cancelling()

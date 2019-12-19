@@ -1,15 +1,17 @@
 import UIKit
 
 open class GridView: UICollectionView {
-	public override init(frame: CGRect, collectionViewLayout: UICollectionViewLayout) {
-		super.init(frame: frame, collectionViewLayout: collectionViewLayout)
-		construct()
-	}
-	
-	open func construct() {}
-	open func arrange() {}
-	open func style() {}
-	open func fill() {}
-	
-	public required init?(coder aDecoder: NSCoder) { super.init(coder: aDecoder) }
+	public weak var navigator: Navigator?
+}
+
+extension GridView: Component {
+
+	@objc open func construct() {}
+	@objc open func associate() {}
+	@objc open func arrange() {}
+	@objc open func craft() { backgroundColor = .clear }
+	@objc open func navigate() {}
+	open func show() {}
+		
+	public var components: [Component] { return [] }
 }

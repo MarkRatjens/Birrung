@@ -1,8 +1,8 @@
 import UIKit
 
 open class FloatingAddButton: FloatingButton {
-	open override func style() {
-		super.style()
+	open override func craft() {
+		super.craft()
 		icon = Fonts.materialIcons.floatingAdd.rawValue
 		theme = Theme.floatingAddButton
 	}
@@ -10,8 +10,8 @@ open class FloatingAddButton: FloatingButton {
 
 
 open class FloatingDownloadButton: FloatingButton {
-	open override func style() {
-		super.style()
+	open override func craft() {
+		super.craft()
 		icon = Fonts.materialIcons.download.rawValue
 		theme = Theme.floatingAddButton
 	}
@@ -19,8 +19,8 @@ open class FloatingDownloadButton: FloatingButton {
 
 
 open class FloatingRefreshButton: FloatingButton {
-	open override func style() {
-		super.style()
+	open override func craft() {
+		super.craft()
 		icon = Fonts.materialIcons.refresh.rawValue
 		theme = Theme.floatingAddButton
 	}
@@ -28,8 +28,8 @@ open class FloatingRefreshButton: FloatingButton {
 
 
 open class FloatingRequestButton: FloatingButton {
-	open override func style() {
-		super.style()
+	open override func craft() {
+		super.craft()
 		icon = Fonts.materialIcons.request.rawValue
 		theme = Theme.floatingAddButton
 	}
@@ -37,8 +37,8 @@ open class FloatingRequestButton: FloatingButton {
 
 
 open class ShutterButton: FloatingButton {
-	open override func style() {
-		super.style()
+	open override func craft() {
+		super.craft()
 		icon = Fonts.materialIcons.scanner.rawValue
 		theme = Theme.shutterButton
 	}
@@ -46,16 +46,16 @@ open class ShutterButton: FloatingButton {
 
 
 open class CameraSwitchButton: FloatingButton {
-	open override func style() {
-		super.style()
+	open override func craft() {
+		super.craft()
 		icon = Fonts.materialIcons.switchCamera.rawValue
 		theme = Theme.shutterButton
 	}
 }
 
 open class HomeButton: FloatingButton {
-	open override func style() {
-		super.style()
+	open override func craft() {
+		super.craft()
 		icon = Fonts.materialIcons.home.rawValue
 		theme = Theme.homeButton
 	}

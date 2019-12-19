@@ -4,15 +4,15 @@ open class TabBarController: UITabBarController {
 	open override func viewDidLoad() {
 		super.viewDidLoad()
 		construct()
-		fill()
+		show()
 		arrange()
-		style()
+		craft()
 	}
 	
 	open func construct() {}
-	open func fill() {}
+	open func show() {}
 	open func arrange() {}
-	open func style() {}
+	open func craft() {}
 
 	open override var shouldAutorotate: Bool {
 		if let vc = viewControllers?[selectedIndex] { return vc.shouldAutorotate }

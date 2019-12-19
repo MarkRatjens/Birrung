@@ -1,17 +1,6 @@
 import UIKit
 
 open class Button: UIButton {
-	public override init(frame: CGRect) {
-		super.init(frame: frame)
-		construct()
-		arrange()
-		style()
-		fill()
-	}
-	
-	open  func construct() {
-		addTarget(self, action: #selector(respondToTouch(_:)), for: .touchUpInside)
-	}
 	
 	@objc func respondToTouch(_ sender: CheckBox) {
 		isSelected = !isSelected
@@ -19,8 +8,19 @@ open class Button: UIButton {
 	}
 	
 	public var completeTouch: ((Button) -> Void)?
+
+	public weak var navigator: Navigator?
+
+	public var theme: Theme?
+}
+
+extension Button: Component {
 	
-	open func style() {
+	@objc open func construct() {
+		addTarget(self, action: #selector(respondToTouch(_:)), for: .touchUpInside)
+	}
+	
+	@objc open func craft() {
 		if let t = theme {
 			titleLabel?.textColor = t.text
 			setTitleColor(t.text, for: .normal)
@@ -28,10 +28,10 @@ open class Button: UIButton {
 		titleLabel?.font =  UIFont.systemFont(ofSize: 12)
 	}
 
-	open func arrange() {}
-	open func fill() {}
+	@objc open func associate() {}
+	@objc open func arrange() {}
+	@objc open func navigate() {}
+	@objc open func show() {}
 	
-	public var theme: Theme?
-
-	public required init?(coder aDecoder: NSCoder) { super.init(coder: aDecoder) }
+	public var components: [Component] { return [] }
 }

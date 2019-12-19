@@ -1,19 +1,24 @@
 import UIKit
 
 open class GridViewCell: UICollectionViewCell {
-	public override init(frame: CGRect) {
-		super.init(frame: frame)
+	open func assemble() {
 		construct()
+		associate()
 		arrange()
+		craft()
 	}
-
-	open func arrange() { for s in nySubviews() { s.arrange() } }
-	open func fill() { style() }
-	open func style() {}
-
-	open func construct() {}
 	
-	public func nySubviews() -> [View] { return contentView.subviews.compactMap { $0 as? View } }
+	public weak var navigator: Navigator?
+}
 
-	public required init?(coder aDecoder: NSCoder) { super.init(coder: aDecoder) }
+extension GridViewCell: Component {
+	
+	@objc open func construct() { for c in components { c.construct() } }
+	@objc open func associate() { for c in components { c.associate() } }
+	@objc open func arrange() { for c in components { c.arrange() } }
+	@objc open func craft() { for c in components { c.craft() } }
+	@objc open func show() { assemble() }
+	@objc open func navigate() { for c in components { c.navigator = navigator } }
+
+	public var components: [Component] { return subviews.compactMap { $0 as? Component } }
 }

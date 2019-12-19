@@ -1,28 +1,22 @@
 import UIKit
 
 open class DetailViewCell: TableViewCell {
-	public var model: DetailModel! { didSet { fill() } }
+	public var model: DetailModel! { didSet { show() } }
 	
-	override open func style() {
-		super.style()
+	override open func craft() {
+		super.craft()
 		accessoryType = .none
 		textLabel?.numberOfLines = 0
 		detailTextLabel?.numberOfLines = 0
 	}
 	
-	override open func fill() {
-		super.fill()
+	override open func show() {
+		super.show()
 		textLabel?.text = model.title
 		detailTextLabel?.text = model.detail
 	}
 
 	override open func setSelected(_ selected: Bool, animated: Bool) { selectedBackgroundView = UIView() }
-	
-	override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
-		super.init(style: .value1, reuseIdentifier: reuseIdentifier)
-	}
-	
-	public required init?(coder aDecoder: NSCoder) { super.init(coder: aDecoder) }
 }
 
 public struct DetailModel {
