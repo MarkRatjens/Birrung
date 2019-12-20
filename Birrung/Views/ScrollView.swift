@@ -10,11 +10,13 @@ extension ScrollView: Component {
 	@objc open func associate() { for c in components { c.associate() } }
 	@objc open func arrange() { for c in components { c.arrange() } }
 	@objc open func craft() { for c in components { c.craft() } }
+	@objc open func embed() { for v in views { v.embed() } }
 	@objc open func navigate() { for c in components { c.navigator = navigator } }
 
 	@objc open func show() {}
 
 	public var components: [Component] { return subviews.compactMap { $0 as? Component } }
+	public var views: [View] { return subviews.compactMap { $0 as? View } }
 }
 
 

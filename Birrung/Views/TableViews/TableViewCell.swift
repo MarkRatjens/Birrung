@@ -38,10 +38,12 @@ extension TableViewCell: Component {
 		selectionStyle = .none
 	}
 		
+	@objc open func embed() { for v in views { v.embed() } }
 	@objc open func navigate() { for c in components { c.navigator = navigator } }
 	@objc open func show() { assemble() }
 	
 	public var components: [Component] { return subviews.compactMap { $0 as? Component } }
+	public var views: [View] { return subviews.compactMap { $0 as? View } }
 }
 
 

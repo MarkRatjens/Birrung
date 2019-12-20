@@ -73,11 +73,13 @@ extension ViewController: Component {
 	@objc open func arrange() { for c in components { c.arrange() } }
 	@objc open func craft() { for c in components { c.craft() } }
 	@objc open func navigate() { for c in components { c.navigator = self } }
+	@objc open func embed() { for v in views { v.embed() }}
 
 	@objc open func show() {}
 	@objc open func reshow() {}
 
 	public var components: [Component] { return view.subviews.compactMap { $0 as? Component } }
+	public var views: [View] { return view.subviews.compactMap { $0 as? View } }
 }
 
 
