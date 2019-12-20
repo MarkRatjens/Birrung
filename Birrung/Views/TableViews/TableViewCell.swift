@@ -7,7 +7,7 @@ open class TableViewCell: UITableViewCell {
 		associate()
 		arrange()
 		craft()
-		embed()
+		embedding()
 	}
 
 	public func embed(controller: ViewController, in container: View) {
@@ -16,7 +16,6 @@ open class TableViewCell: UITableViewCell {
 		container.addSubview(controller.view)
 	}
 
-	open func embed() {}
 	open func segue(from navigator: Navigator) {}
 
 	open var viewController: UIViewController? { return ((superview as? UITableView)?.delegate as? UIViewController) }	
@@ -43,4 +42,10 @@ extension TableViewCell: Component {
 	@objc open func show() { assemble() }
 	
 	public var components: [Component] { return subviews.compactMap { $0 as? Component } }
+}
+
+
+extension TableViewCell: Bed {
+	@objc open func embedding() { for b in beds { b.embedding() } }
+	public var beds: [Bed] { return subviews.compactMap { $0 as? Bed } }
 }

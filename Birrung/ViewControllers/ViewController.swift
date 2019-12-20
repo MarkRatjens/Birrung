@@ -27,13 +27,12 @@ open class ViewController: UIViewController {
 		show()
 		arrange()
 		craft()
-		embed()
+		embedding()
 	}
 	
 	public weak var navigator: Navigator? { didSet { navigate() } }
 
 	open func guide() {}
-	open func embed() {}
 	open func log() {}
 
 	open func slideNext() {}
@@ -79,6 +78,12 @@ extension ViewController: Component {
 	@objc open func reshow() {}
 
 	public var components: [Component] { return view.subviews.compactMap { $0 as? Component } }
+}
+
+
+extension ViewController: Bed {
+	@objc open func embedding() { for b in beds { b.embedding() } }
+	public var beds: [Bed] { return view.subviews.compactMap { $0 as? Bed } }
 }
 
 

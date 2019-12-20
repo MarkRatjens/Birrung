@@ -22,6 +22,12 @@ extension StackView: Component {
 }
 
 
+extension StackView: Bed {
+	@objc open func embedding() { for b in beds { b.embedding() } }
+	public var beds: [Bed] { return subviews.compactMap { $0 as? Bed } }
+}
+
+
 
 
 open class HorizontalStack: StackView {

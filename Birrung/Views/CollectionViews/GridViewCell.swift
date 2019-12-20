@@ -22,3 +22,9 @@ extension GridViewCell: Component {
 
 	public var components: [Component] { return subviews.compactMap { $0 as? Component } }
 }
+
+
+extension GridViewCell: Bed {
+	@objc open func embedding() { for b in beds { b.embedding() } }
+	public var beds: [Bed] { return subviews.compactMap { $0 as? Bed } }
+}
