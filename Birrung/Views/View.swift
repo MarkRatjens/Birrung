@@ -15,6 +15,25 @@ open class View: UIView {
 		container.addSubview(controller.view)
 	}
 	
+	open func hide() { animate {
+		self.isHidden = true
+		self.layoutIfNeeded()
+	}}
+	
+	open func reveal() { animate {
+		self.isHidden = false
+		self.layoutIfNeeded()
+	}}
+
+	open func animate(_ animations: @escaping () -> Void) {
+		UIView.animate(
+			withDuration: 0.4,
+			delay: 0.0,
+			options: [.curveEaseOut],
+			animations: animations
+		)
+	}
+	
 	public weak var navigator: Navigator? { didSet { navigate() } }
 }
 
