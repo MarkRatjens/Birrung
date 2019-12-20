@@ -9,8 +9,8 @@ open class CheckBox: Button {
 		}
 	}
 
-	override open func craft() {
-		super.craft()
+	override open func crafting() {
+		super.crafting()
 		setAttributedTitle(blank, for: .normal)
 		isSelected = false
 	}

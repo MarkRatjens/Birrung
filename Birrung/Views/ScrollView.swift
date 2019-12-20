@@ -1,22 +1,20 @@
 import UIKit
 
 open class ScrollView: UIScrollView {
-	public weak var navigator: Navigator? { didSet { navigate() } }
+	public weak var navigator: Navigator? { didSet { navigating() } }
 }
 
 extension ScrollView: Component {
 	
-	@objc open func construct() { for c in components { c.construct() } }
-	@objc open func associate() { for c in components { c.associate() } }
-	@objc open func arrange() { for c in components { c.arrange() } }
-	@objc open func craft() { for c in components { c.craft() } }
-	@objc open func embed() { for v in views { v.embed() } }
-	@objc open func navigate() { for c in components { c.navigator = navigator } }
+	@objc open func constructing() { for c in components { c.constructing() } }
+	@objc open func associating() { for c in components { c.associating() } }
+	@objc open func arranging() { for c in components { c.arranging() } }
+	@objc open func crafting() { for c in components { c.crafting() } }
+	@objc open func navigating() { for c in components { c.navigator = navigator } }
 
-	@objc open func show() {}
+	@objc open func showing() {}
 
 	public var components: [Component] { return subviews.compactMap { $0 as? Component } }
-	public var views: [View] { return subviews.compactMap { $0 as? View } }
 }
 
 

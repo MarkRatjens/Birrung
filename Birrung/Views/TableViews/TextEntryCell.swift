@@ -4,16 +4,16 @@ open class TextEntryCell: TableViewCell {
 	public var title = Label()
 	public var detail = TextField()
 
-	open override func construct() {
+	open override func constructing() {
 		contentView.addSubview(stack)
 		stack.addArrangedSubview(title)
 		stack.addArrangedSubview(detail)
 		detail.delegate = self
-		super.construct()
+		super.constructing()
 	}
 	
-	open override func arrange() {
-		super.arrange()
+	open override func arranging() {
+		super.arranging()
 		stack.spacing = 4
 		stack.fit(in: contentView, pad: [12, 8])
 	}

@@ -1,15 +1,15 @@
 import UIKit
 
 open class FloatingButton: Button {
-	open override func arrange() {
-		super.arrange()
+	open override func arranging() {
+		super.arranging()
 		translatesAutoresizingMaskIntoConstraints = false
 		heightAnchor.constraint(equalToConstant: 64).isActive = true
 		widthAnchor.constraint(equalTo: heightAnchor).isActive = true
 	}
 	
-	open override func craft() {
-		super.craft()
+	open override func crafting() {
+		super.crafting()
 		layer.cornerRadius = 32
 		layer.borderWidth = 4
 		titleLabel?.textAlignment = .center

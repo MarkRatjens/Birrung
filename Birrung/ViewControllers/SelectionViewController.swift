@@ -6,9 +6,9 @@ open class SelectionViewController: ListViewController {
 		pop()
 	}
 
-	open override func construct() {
+	open override func constructing() {
 		navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(done))
-		super.construct()
+		super.constructing()
 	}
 	
 	open func setSelection(to row: Int) {}

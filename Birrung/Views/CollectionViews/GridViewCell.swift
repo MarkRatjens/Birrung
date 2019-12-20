@@ -1,11 +1,11 @@
 import UIKit
 
 open class GridViewCell: UICollectionViewCell {
-	open func assemble() {
-		construct()
-		associate()
-		arrange()
-		craft()
+	open func assembling() {
+		constructing()
+		associating()
+		arranging()
+		crafting()
 	}
 	
 	public weak var navigator: Navigator?
@@ -13,16 +13,14 @@ open class GridViewCell: UICollectionViewCell {
 
 extension GridViewCell: Component {
 	
-	@objc open func construct() { for c in components { c.construct() } }
-	@objc open func associate() { for c in components { c.associate() } }
-	@objc open func arrange() { for c in components { c.arrange() } }
-	@objc open func craft() { for c in components { c.craft() } }
-	@objc open func show() { assemble() }
-	@objc open func embed() { for v in views { v.embed() } }
-	@objc open func navigate() { for c in components { c.navigator = navigator } }
+	@objc open func constructing() { for c in components { c.constructing() } }
+	@objc open func associating() { for c in components { c.associating() } }
+	@objc open func arranging() { for c in components { c.arranging() } }
+	@objc open func crafting() { for c in components { c.crafting() } }
+	@objc open func showing() { assembling() }
+	@objc open func navigating() { for c in components { c.navigator = navigator } }
 
 	public var components: [Component] { return subviews.compactMap { $0 as? Component } }
-	public var views: [View] { return subviews.compactMap { $0 as? View } }
 }
 
 

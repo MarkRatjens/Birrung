@@ -12,18 +12,18 @@ open class SegmentedControl: UISegmentedControl {
 
 extension SegmentedControl: Component {
 	
-	@objc open func construct() { addTarget(self, action: #selector(respond(_:)), for: .valueChanged) }
+	@objc open func constructing() { addTarget(self, action: #selector(respond(_:)), for: .valueChanged) }
 	
-	@objc open func associate() {}
-	@objc open func arrange() {}
+	@objc open func associating() {}
+	@objc open func arranging() {}
 	
-	@objc open func craft() {
+	@objc open func crafting() {
 		layer.cornerRadius = 2
 		layer.borderWidth = 1
 	}
 
-	@objc open func navigate() {}
-	@objc open func show() {}
+	@objc open func navigating() {}
+	@objc open func showing() {}
 		
 	public var components: [Component] { return [] }
 }

@@ -7,8 +7,8 @@ open class ToggleButton: Button {
 	public var isOn = true
 	public var isOff: Bool { return !isOn }
 
-	override open func craft() {
-		super.craft()
+	override open func crafting() {
+		super.crafting()
 		setAttributedTitle(offLabel, for: .normal)
 	}
 	

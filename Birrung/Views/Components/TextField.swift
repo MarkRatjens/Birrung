@@ -30,12 +30,12 @@ open class TextField: UITextField {
 
 extension TextField: Component {
 
-	@objc open func construct() {}
-	@objc open func associate() { delegate = self }
-	@objc open func arrange() {}
-	@objc open func craft() { borderStyle = .roundedRect }
-	@objc open func show() {}
-	@objc open func navigate() {}
+	@objc open func constructing() {}
+	@objc open func associating() { delegate = self }
+	@objc open func arranging() {}
+	@objc open func crafting() { borderStyle = .roundedRect }
+	@objc open func showing() {}
+	@objc open func navigating() {}
 
 	public var components: [Component] { return [] }
 }

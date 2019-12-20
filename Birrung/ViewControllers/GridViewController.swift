@@ -3,29 +3,29 @@ import UIKit
 open class GridViewController: ViewController, UICollectionViewDelegateFlowLayout {
 	public var collectionView: GridView!
 
-	open override func construct() {
+	open override func constructing() {
 		collectionView = GridView(frame: view.frame, collectionViewLayout: layout)
 		view.addSubview(collectionView)
-		super.construct()
+		super.constructing()
 	}
 	
-	open override func associate() {
-		super.associate()
+	open override func associating() {
+		super.associating()
 		collectionView.delegate = self
 	}
 
-	open override func arrange() {
-		super.arrange()
+	open override func arranging() {
+		super.arranging()
 		collectionView.fit(in: view)
 	}
 
-	open override func craft() {
-		super.craft()
+	open override func crafting() {
+		super.crafting()
 		collectionView.backgroundColor = .clear
 	}
 
-	open override func reshow() {
-		super.reshow()
+	open override func reshowing() {
+		super.reshowing()
 		if let ips = collectionView.indexPathsForSelectedItems {
 			for ip in ips { collectionView.deselectItem(at: ip, animated: true) }
 			collectionView.reloadItems(at: ips)

@@ -3,28 +3,28 @@ import UIKit
 open class ListViewController: ViewController, UITableViewDelegate {
 	public var tableView = TableView()
 	
-	open override func construct() {
+	open override func constructing() {
 		view.addSubview(tableView)
-		super.construct()
+		super.constructing()
 	}
 	
-	open override func associate() {
-		super.associate()
+	open override func associating() {
+		super.associating()
 		tableView.delegate = self
 	}
 	
-	open override func arrange() {
-		super.arrange()
+	open override func arranging() {
+		super.arranging()
 		tableView.fit(in: safeGuide)
 	}
 
-	open override func craft() {
-		super.craft()
+	open override func crafting() {
+		super.crafting()
 		tableView.separatorStyle = .none
 	}
 
-	open override func show() {
-		super.show()
+	open override func showing() {
+		super.showing()
 		if let ip = tableView.indexPathForSelectedRow {
 			tableView.deselectRow(at: ip, animated: true)
 			tableView.scrollToRow(at: ip, at: .none, animated: true)

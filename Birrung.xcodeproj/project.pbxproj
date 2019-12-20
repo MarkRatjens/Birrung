@@ -42,6 +42,7 @@
 		4DD767B323014BC200FE3864 /* CheckBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DD767B223014BC200FE3864 /* CheckBox.swift */; };
 		4DD9D57122AF497B003AE393 /* ScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DD9D57022AF497B003AE393 /* ScrollView.swift */; };
 		4DD9D57722B097BB003AE393 /* UIStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DD9D57622B097BB003AE393 /* UIStackView.swift */; };
+		4DDAE55623AC84BA001AE359 /* Bed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DDAE55523AC84BA001AE359 /* Bed.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -92,6 +93,7 @@
 		4DD767B223014BC200FE3864 /* CheckBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckBox.swift; sourceTree = "<group>"; };
 		4DD9D57022AF497B003AE393 /* ScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollView.swift; sourceTree = "<group>"; };
 		4DD9D57622B097BB003AE393 /* UIStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStackView.swift; sourceTree = "<group>"; };
+		4DDAE55523AC84BA001AE359 /* Bed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bed.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -218,6 +220,7 @@
 			children = (
 				4D3DF61723A78C20004CAD56 /* Component.swift */,
 				4D5EBEE023A862AB006A4659 /* Navigator.swift */,
+				4DDAE55523AC84BA001AE359 /* Bed.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -338,6 +341,7 @@
 				4D189750223F35530089A8F4 /* FloatingButton.swift in Sources */,
 				4D189745223F35530089A8F4 /* GridViewController.swift in Sources */,
 				4D3DF61823A78C20004CAD56 /* Component.swift in Sources */,
+				4DDAE55623AC84BA001AE359 /* Bed.swift in Sources */,
 				4D189741223F35530089A8F4 /* ViewController.swift in Sources */,
 				4D189752223F35530089A8F4 /* TableViewCell.swift in Sources */,
 				4D189756223F35530089A8F4 /* GridViewCell.swift in Sources */,

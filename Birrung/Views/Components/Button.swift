@@ -16,11 +16,11 @@ open class Button: UIButton {
 
 extension Button: Component {
 	
-	@objc open func construct() {
+	@objc open func constructing() {
 		addTarget(self, action: #selector(respondToTouch(_:)), for: .touchUpInside)
 	}
 	
-	@objc open func craft() {
+	@objc open func crafting() {
 		if let t = theme {
 			titleLabel?.textColor = t.text
 			setTitleColor(t.text, for: .normal)
@@ -28,10 +28,10 @@ extension Button: Component {
 		titleLabel?.font =  UIFont.systemFont(ofSize: 12)
 	}
 
-	@objc open func associate() {}
-	@objc open func arrange() {}
-	@objc open func navigate() {}
-	@objc open func show() {}
+	@objc open func associating() {}
+	@objc open func arranging() {}
+	@objc open func navigating() {}
+	@objc open func showing() {}
 	
 	public var components: [Component] { return [] }
 }

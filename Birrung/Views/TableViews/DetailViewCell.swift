@@ -1,17 +1,17 @@
 import UIKit
 
 open class DetailViewCell: TableViewCell {
-	public var model: DetailModel! { didSet { show() } }
+	public var model: DetailModel! { didSet { showing() } }
 	
-	override open func craft() {
-		super.craft()
+	override open func crafting() {
+		super.crafting()
 		accessoryType = .none
 		textLabel?.numberOfLines = 0
 		detailTextLabel?.numberOfLines = 0
 	}
 	
-	override open func show() {
-		super.show()
+	override open func showing() {
+		super.showing()
 		textLabel?.text = model.title
 		detailTextLabel?.text = model.detail
 	}

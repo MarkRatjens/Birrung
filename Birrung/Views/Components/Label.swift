@@ -6,12 +6,12 @@ open class Label: UILabel {
 
 extension Label: Component {
 	
-	@objc open func construct() {}
-	@objc open func associate() {}
-	@objc open func arrange() {}
-	@objc open func craft() { numberOfLines = 0 }
-	@objc open func show() {}
-	@objc open func navigate() {}
+	@objc open func constructing() {}
+	@objc open func associating() {}
+	@objc open func arranging() {}
+	@objc open func crafting() { numberOfLines = 0 }
+	@objc open func showing() {}
+	@objc open func navigating() {}
 
 	public var components: [Component] { return [] }
 }

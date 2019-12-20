@@ -1,10 +1,10 @@
 public protocol Component: class {
-	func construct()
-	func associate()
-	func arrange()
-	func craft()
-	func show()
-	func navigate()
+	func constructing()
+	func associating()
+	func arranging()
+	func crafting()
+	func showing()
+	func navigating()
 	
 	var components: [Component] { get }	
 	var navigator: Navigator? { get set }

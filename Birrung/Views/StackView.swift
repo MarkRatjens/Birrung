@@ -1,26 +1,24 @@
 import UIKit
 
 open class StackView: UIStackView {
-	public weak var navigator: Navigator? { didSet { navigate() } }
+	public weak var navigator: Navigator? { didSet { navigating() } }
 }
 	
 extension StackView: Component {
-	@objc open func construct() { for c in components { c.construct() } }
-	@objc open func associate() { for c in components { c.associate() } }
-	@objc open func craft() { for c in components { c.craft() } }
-	@objc open func embed() { for v in views { v.embed() } }
-	@objc open func navigate() { for c in components { c.navigator = navigator } }
+	@objc open func constructing() { for c in components { c.constructing() } }
+	@objc open func associating() { for c in components { c.associating() } }
+	@objc open func crafting() { for c in components { c.crafting() } }
+	@objc open func navigating() { for c in components { c.navigator = navigator } }
 
-	@objc open func arrange() {
-		for c in components { c.arrange() }
+	@objc open func arranging() {
+		for c in components { c.arranging() }
 		alignment = .fill
 		spacing = 0
 	}
 
-	@objc open func show() {}
+	@objc open func showing() {}
 
 	public var components: [Component] { return subviews.compactMap { $0 as? Component } }
-	public var views: [View] { return subviews.compactMap { $0 as? View } }
 }
 
 
@@ -33,8 +31,8 @@ extension StackView: Bed {
 
 
 open class HorizontalStack: StackView {
-	open override func arrange() {
-		super.arrange()
+	open override func arranging() {
+		super.arranging()
 		axis = .horizontal
 		distribution = .equalCentering
 	}
@@ -44,8 +42,8 @@ open class HorizontalStack: StackView {
 
 
 open class VerticalStack: StackView {
-	open override func arrange() {
-		super.arrange()
+	open override func arranging() {
+		super.arranging()
 		axis = .vertical
 		distribution = .fill
 	}
